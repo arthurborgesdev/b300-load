@@ -1,29 +1,30 @@
-# b300-load (Balança eletrônica para campanha da saúde)
+# b300-load (Electronic weight machine for a health campaign)
 
-## Pra que serve?
+## What it is for?
 
-Para ser utilizada em uma campanha publicitária incentivando as pessoas a se preocuparem mais com a saúde.
-
-
-## Como funciona?
-
-Ao ligar o equipamento (desenvolvido utilizando 4 células de carga, um raspberry pi 3 e um módulo hx711), o mesmo é iniciado com um SO Linux que ao ligar chama o script para carregar o programa escrito em Python. O mesmo acessa o GPIO do raspberry, lê os dados das células de carga e transfere as informações para o monitor através da porta HDMI.
+To be used in a marketing campaign to encourage people to worry more about health.
 
 
-## Arquivos principais e suas funções
+## How it works?
+
+The equipment consists of a Raspberry PI 3, 4 load cells and a hx711 module.
+
+When the equipment is turned on, a Linux OS boots and calls the Python script. This script access the raspberry PI GPIOs, read data from the load cells and transfer the data to the monitor display through a HDMI port. The monitor then shows the weight of the person.
+
+## Main files and its functionalities
 
 **/research-links**
 
-Contém a maior parte dos links utilizados para pesquisa, que ajudaram o desenvolvimento do protótipo.
+Contains the most part of the hyperlinks used in the research, that helped the development of the prototype.
 
 **/bmkt.sh**
 
-Roda o script balanca.py até que uma tecla seja pressionada para finalizar o programa. 
+Runs the balanca.py script, until a keyboard key is pressed to terminate the program.
 
 **/balanca.py**
 
-Arquivo principal. Reponsável por fazer a conversão das medidas do HX711 para strings e mostrar os dados na tela utilizando Tkinter. Contém rotinas para calibrar a balança antes de aferir o peso.
+Main file. Responsible to make the conversion between the HX711 meterings to String and to show the data on the screen using Tkinter. Contains routines to calibrate the weigth machine before reading the weight.
 
 **/display.py**
 
-Arquivo contendo código para renderização da tela. Utilizado como base para renderização do peso.
+File that contains the code to render the information on the screen. Used as a frame to render the weight.
